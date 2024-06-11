@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lecturer_nav"
+    app:startDestination="@id/lecturerHomeFragment">
+
+    <fragment
+        android:id="@+id/lecturerHomeFragment"
+        android:name="com.example.easyattend.lecturer.fragments.LecturerHomeFragment"
+        android:label="fragment_lecturer_home"
+        tools:layout="@layout/fragment_lecturer_home" />
+    <fragment
+        android:id="@+id/lecturerSettingFragment"
+        android:name="com.example.easyattend.lecturer.fragments.LecturerSettingFragment"
+        android:label="fragment_lecturer_setting"
+        tools:layout="@layout/fragment_lecturer_setting" />
+    <fragment
+        android:id="@+id/lecturerApprovalFragment"
+        android:name="com.example.easyattend.lecturer.fragments.LecturerApprovalFragment"
+        android:label="fragment_lecturer_approval"
+        tools:layout="@layout/fragment_lecturer_approval" >
+        <action
+            android:id="@+id/action_lecturerApprovalFragment_to_lecturerApprovalDetailsFragment"
+            app:destination="@id/lecturerApprovalDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lecturerNotificationFragment"
+        android:name="com.example.easyattend.lecturer.fragments.LecturerNotificationFragment"
+        android:label="fragment_lecturer_notification"
+        tools:layout="@layout/fragment_lecturer_notification" />
+    <fragment
+        android:id="@+id/lecturerApprovalDetailsFragment"
+        android:name="com.example.easyattend.lecturer.fragments.LecturerApprovalDetailsFragment"
+        android:label="fragment_lecturue_approval_details"
+        tools:layout="@layout/fragment_lecturue_approval_details" />
+    <fragment
+        android:id="@+id/viewAttendanceFragment"
+        android:name="com.example.easyattend.lecturer.fragments.ViewAttendanceFragment"
+        android:label="fragment_view_attendance"
+        tools:layout="@layout/fragment_view_attendance" />
+    <fragment
+        android:id="@+id/viewReportFragment"
+        android:name="com.example.easyattend.lecturer.fragments.ViewReportFragment"
+        android:label="fragment_view_report"
+        tools:layout="@layout/fragment_view_report" >
+        <action
+            android:id="@+id/action_viewReportFragment_to_eachStudentAttendanceFragment"
+            app:destination="@id/eachStudentAttendanceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lecturerSubjectFragment"
+        android:name="com.example.easyattend.lecturer.fragments.LecturerSubjectFragment"
+        android:label="fragment_lecturer_subject"
+        tools:layout="@layout/fragment_lecturer_subject" >
+        <action
+            android:id="@+id/action_lecturerSubjectFragment_to_viewAttendanceFragment"
+            app:destination="@id/viewAttendanceFragment" />
+        <action
+            android:id="@+id/action_lecturerSubjectFragment_to_viewReportFragment"
+            app:destination="@id/viewReportFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eachStudentAttendanceFragment"
+        android:name="com.example.easyattend.lecturer.fragments.EachStudentAttendanceFragment"
+        android:label="fragment_each_student_attendance"
+        tools:layout="@layout/fragment_each_student_attendance" />
+</navigation>

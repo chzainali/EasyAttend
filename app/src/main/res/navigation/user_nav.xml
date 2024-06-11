@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_nav"
+    app:startDestination="@id/studentHomeFragment">
+
+
+    <fragment
+        android:id="@+id/studentHomeFragment"
+        android:name="com.example.easyattend.student.fragments.StudentHomeFragment"
+        android:label="fragment_student_home"
+        tools:layout="@layout/fragment_student_home" >
+        <action
+            android:id="@+id/action_studentHomeFragment_to_tapFragment"
+            app:destination="@id/tapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tapFragment"
+        android:name="com.example.easyattend.student.fragments.TapFragment"
+        android:label="fragment_tap"
+        tools:layout="@layout/fragment_tap" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.easyattend.student.fragments.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/approvalFragment"
+        android:name="com.example.easyattend.student.fragments.ApprovalFragment"
+        android:label="fragment_approval"
+        tools:layout="@layout/fragment_approval" >
+        <action
+            android:id="@+id/action_approvalFragment_to_applyLeaveFragment"
+            app:destination="@id/applyLeaveFragment" />
+        <action
+            android:id="@+id/action_approvalFragment_to_applicationStatusFragment"
+            app:destination="@id/applicationStatusFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.easyattend.student.fragments.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/applyLeaveFragment"
+        android:name="com.example.easyattend.student.fragments.ApplyLeaveFragment"
+        android:label="fragment_apply_leave"
+        tools:layout="@layout/fragment_apply_leave" />
+    <fragment
+        android:id="@+id/applicationStatusFragment"
+        android:name="com.example.easyattend.student.fragments.ApplicationStatusFragment"
+        android:label="fragment_application_status"
+        tools:layout="@layout/fragment_application_status" />
+    <fragment
+        android:id="@+id/attendanceFragment"
+        android:name="com.example.easyattend.student.fragments.AttendanceFragment"
+        android:label="fragment_attendance"
+        tools:layout="@layout/fragment_attendance" >
+        <action
+            android:id="@+id/action_attendanceFragment_to_attendanceDetailsFragment"
+            app:destination="@id/attendanceDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/attendanceDetailsFragment"
+        android:name="com.example.easyattend.student.fragments.AttendanceDetailsFragment"
+        android:label="fragment_attendance_details"
+        tools:layout="@layout/fragment_attendance_details" />
+</navigation>
